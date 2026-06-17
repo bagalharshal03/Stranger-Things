@@ -1,0 +1,200 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+a{
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    margin-bottom: 30px;
+}
+img{
+    opacity: 100%;
+}
+h1{
+    font-size: 30px;
+    margin-top: 0px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+h3{
+    color: rgb(240, 20, 20);
+}
+button{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.head{
+    margin-right: 0%;
+    
+    background-repeat: no-repeat;
+    
+
+}
+#ttt{
+    margin-right: 405px;
+    width: 500px;
+    height: 80px;
+    align-items: center;
+}
+head table{
+margin-right: 20%;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #e50914;
+    }
+    50% {
+        text-shadow: 0 0 15px #e50914, 0 0 25px #e50914;
+    }
+    100% {
+        text-shadow: 0 0 5px #e50914;
+    }
+}
+
+@keyframes borderGlow {
+    0% {
+        border-top-color: #333;
+        box-shadow: 0 0 0 rgba(229, 9, 20, 0);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
+    }
+    100% {
+        border-top-color: #e50914;
+        box-shadow: 0 0 0 rgba(229, 9, 20, 0);
+    }
+}
+
+@keyframes linkGlow {
+    0% {
+        text-shadow: 0 0 0 rgba(229, 9, 20, 0);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(229, 9, 20, 0.8);
+    }
+}
+
+footer{
+    background-color: #1a1a1a;
+    border-top: 2px solid #333;
+    margin-top: 50px;
+    padding: 40px 20px;
+    text-align: center;
+    animation: slideUp 0.8s ease-out, borderGlow 3s ease-in-out infinite;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #e50914, transparent);
+    animation: slideUp 1s ease-out;
+}
+
+.footer-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    animation: slideUp 1s ease-out 0.2s both;
+}
+
+.footer-section{
+    transition: all 0.3s ease;
+}
+
+.footer-section:hover{
+    transform: translateY(-5px);
+}
+
+.footer-section h4{
+    color: #e50914;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    animation: glow 2s ease-in-out infinite;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.footer-section h4:hover{
+    animation: glow 0.5s ease-in-out;
+}
+
+.footer-section a{
+    display: block;
+    font-size: 12px;
+    color: #999;
+    text-decoration: none;
+    margin: 8px 0;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 5px 0;
+    animation: slideUp 0.8s ease-out backwards;
+}
+
+.footer-section a:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.footer-section a:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.footer-section a:nth-child(4) {
+    animation-delay: 0.5s;
+}
+
+.footer-section a:hover{
+    color: #e50914;
+    transform: scale(1.1);
+    animation: linkGlow 0.5s ease-in-out;
+}
+
+.footer-section a::before {
+    content: '▶ ';
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: #e50914;
+}
+
+.footer-section a:hover::before {
+    opacity: 1;
+}
+
+.footer-section p{
+    font-size: 12px;
+    color: #666;
+    margin: 15px 0 0 0;
+    transition: all 0.3s ease;
+    animation: slideUp 1s ease-out 0.6s both;
+    letter-spacing: 0.5px;
+}
+
+.footer-section p:hover{
+    color: #999;
+}
